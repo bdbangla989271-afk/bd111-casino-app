@@ -1,19 +1,19 @@
 # 🎰 BD111 Real Casino Web App + Telegram Bot
 
-**BD111 Real Casino** একটি Demo Online Casino Web App যা Android এবং PC-এ চলতে পারে।  
-এটি **Slot Machine Game UI**, **Dashboard**, **Deposit/Withdraw Demo**, **Admin Panel**, এবং **Telegram Bot Auto Notification** সহ আসে।  
+**BD111 Real Casino** একটি  Online Casino Web App যা Android এবং PC-এ চলতে পারে।  
 
----
+## Features
+- Slot Machine UI
+- User Dashboard (Balance, History)
+- Deposit & Withdraw Demo
+- Admin Panel
+- Telegram Bot Auto Notification
+- Mobile Friendly / APK Ready
 
-## 🛠 Features
+## Run Instructions
+1. Python HTTP Server বা Acode ব্যবহার করে Localhost চালান
+2. `index.html` ওপেন করুন
+3. `bot.py` Python 3-এ রান করুন
 
-- 🎮 **Slot Machine Game UI** – Realistic slots with winning notifications.  
-- 👤 **User Dashboard** – Balance, Game History, Deposit/Withdraw Demo.  
-- 💰 **Deposit & Withdraw** – Demo forms to simulate transactions.  
-- 👨‍💻 **Admin Panel** – Approve/Reject deposit & withdraw requests.  
-- 🤖 **Telegram Bot** – Auto notifications for deposit requests and updates.  
-- 📱 **Mobile Friendly** – Run on Acode (Android) or Browser (PC).  
-
----
-
-## 📁 Project Structure
+## Datadog Synthetics
+See `datadog-synthetics.yml` for ready-to-use tests.
