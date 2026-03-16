@@ -2,11 +2,11 @@ import os
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 
-TOKEN = os.environ.get("BOT_TOKEN")
+TOKEN = os.environ.get("8617853962:AAEMTP-DnsR_TBVVGt1csYbiCUvPMCSJUUI")
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
-        "Welcome to BD111 Real Casino 🎰\nPlay Slot: http://localhost:8000/slot.html"
+        "Welcome to BD111 Real Casino 🎰\nPlay Slot: https://bd111casino.com/slot.html"
     )
 
 async def deposit(update: Update, context: ContextTypes.DEFAULT_TYPE):
