@@ -1,19 +1,36 @@
-# 🎰 BD111 Real Casino Web App + Telegram Bot
+# BD111 Casino Web App + Telegram Bot + Nginx
 
-**BD111 Real Casino** একটি  Online Casino Web App যা Android এবং PC-এ চলতে পারে।  
+## Overview
 
-## Features
-- Slot Machine UI
-- User Dashboard (Balance, History)
-- Deposit & Withdraw Demo
-- Admin Panel
-- Telegram Bot Auto Notification
-- Mobile Friendly / APK Ready
+This project is a full-featured **Casino Web App** integrated with a **Telegram Bot**.  
+It includes:
 
-## Run Instructions
-1. Python HTTP Server বা Acode ব্যবহার করে Localhost চালান
-2. `index.html` ওপেন করুন
-3. `bot.py` Python 3-এ রান করুন
+- 🎰 Web App: Slot Machine UI, Dashboard, Deposit & Withdraw pages, Admin panel.
+- 🤖 Telegram Bot: `/start` and `/deposit` commands.
+- 🌐 Nginx: Reverse proxy to host the web app on your domain.
+- ✅ Ready-to-deploy structure for VPS or server hosting.
 
-## Datadog Synthetics
-See `datadog-synthetics.yml` for ready-to-use tests.
+---
+
+## Folder Structure
+
+```text
+bd111-casino-deploy/
+│
+├── webapp/
+│   ├── index.html        # Home + Login
+│   ├── dashboard.html    # User Dashboard
+│   ├── slot.html         # Slot Machine UI
+│   ├── deposit.html      # Demo Deposit Page
+│   ├── withdraw.html     # Demo Withdraw Page
+│   ├── admin.html        # Admin Panel
+│   ├── style.css         # All CSS Styling
+│   └── script.js         # Slot Game Logic & UI
+│
+├── bot/
+│   └── bot.py            # Telegram Bot
+│
+├── nginx/
+│   └── bd111casino.conf  # Nginx Configuration
+│
+└── README.md             # Project Documentation
