@@ -1,1 +1,42 @@
+body{
+  background:black;
+  color:gold;
+  font-family:Arial;
+  text-align:center;
+}
 
+header{
+  background:#111;
+  padding:20px;
+}
+
+button{
+  background:gold;
+  color:black;
+  padding:15px;
+  border:none;
+  border-radius:10px;
+  font-size:18px;
+  margin:10px;
+  width:200px;
+}
+
+.slot-container{
+  display:flex;
+  justify-content:center;
+  margin:20px;
+}
+
+.slot{
+  font-size:50px;
+  padding:20px;
+  border:3px solid gold;
+  margin:0 10px;
+  border-radius:15px;
+  width:80px;
+  height:80px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#111;
+}
