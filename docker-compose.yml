@@ -1,1 +1,39 @@
+version: "3.9"
 
+services:
+  casino-web:
+    image: nginx:alpine
+    container_name: bd111-web
+    volumes:
+      - ./webapp:/usr/share/nginx/html:ro
+    ports:
+      - "8000:80"
+
+  telegram-bot:
+    image: python:3.11-slim
+    container_name: bd111-bot
+    volumes:
+      - ./bot:/bot
+    working_dir: /bot
+    command: ["python", "bot.py"]
+    environment:
+      - BOT_TOKEN=8617853962:AAEMTP-DnsR_TBVVGt1csYbiCUvPMCSJUUI
+    restart: unless-stopped
+
+  dd-agent:
+    image: "datadog/agent:7"
+    container_name: dd-agent
+    environment:
+      - DD_API_KEY=c70469aee867cb2947d92ad510dbe1d7
+      - DD_SITE=datadoghq.com
+      - DD_DOGSTATSD_NON_LOCAL_TRAFFIC=true
+      - DD_LOGS_ENABLED=true
+      - DD_LOGS_CONFIG_AUTO_MULTI_LINE_DETECTION=true
+      - DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL=true
+      - DD_CONTAINER_EXCLUDE_LOGS="name:dd-agent"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /proc/:/host/proc/:ro
+      - /sys/fs/cgroup/:/host/sys/fs/cgroup:ro
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro
+    restart: unless-stopped
